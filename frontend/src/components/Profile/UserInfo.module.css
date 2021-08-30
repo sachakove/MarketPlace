@@ -1,0 +1,74 @@
+.adressesPaymentInfo {
+  border-top: 1px solid #e9e9e9;
+  border-bottom: 1px solid #e9e9e9;
+  margin: 5rem 0 10rem 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.infoBox {
+  width: 32%;
+  min-height: 17rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.infoContext {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.infoContentBox {
+  width: 100%;
+  height: 80%;
+  background-color: #f8f8f8;
+  border-radius: 1.6rem;
+  padding: 1.25rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+}
+
+.infoContet {
+  display: flex;
+  flex-direction: column;
+  width: 75%;
+  height: 100%;
+  font-size: 1.7rem;
+  line-height: 2.5rem;
+  font-weight: 500;
+}
+
+.btnEdit {
+  width: clamp(25%, 8rem, 28%);
+  height: 20%;
+  background-color: #fecd33;
+  border: none;
+  border-radius: 0.8rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  align-self: center;
+  font-size: 1.2rem;
+  padding: 0 1.2rem;
+  cursor: pointer;
+}
+
+.btnEdit img {
+  height: 70%;
+}
+
+@media screen and (max-width: 860px) {
+  .adressesPaymentInfo {
+    flex-direction: column;
+    align-items: center;
+  }
+  .infoBox {
+    width: clamp(70%, 60rem, 95%);
+  }
+  .btnEdit {
+    width: 7.5rem;
+  }
+}

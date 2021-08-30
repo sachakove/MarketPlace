@@ -1,0 +1,75 @@
+.centered {
+  /* height: 65rem; */
+  /* height: 70vh; */
+  height: clamp(70vh, 60rem, 80vh);
+  width: 100%;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: white;
+  border-radius: 3.2rem;
+  box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.25);
+  overflow-y: auto;
+}
+
+.logoBox {
+  max-width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* background-color: chartreuse; */
+}
+
+.logo {
+  display: block;
+  max-width: 60%;
+  height: auto;
+}
+
+.title {
+  font-size: 2.4rem;
+  font-weight: 700;
+}
+
+.inputBox {
+  /* min-height: 25%; */
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.authBtn {
+  background-color: #fecd33;
+  border: none;
+  border-radius: 1.6rem;
+  width: 100%;
+  padding: 1.5rem 0;
+  font-size: 1.5rem;
+  font-weight: 700;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  margin-top: 2rem;
+}
+
+.authBottomText {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin: 4rem;
+  cursor: pointer;
+}
+
+.error {
+  color: red;
+  font-size: 1.3rem;
+  margin-top: -1rem;
+  margin-bottom: 0.7rem;
+}
+
+@media screen and (max-width: 1200px) {
+}

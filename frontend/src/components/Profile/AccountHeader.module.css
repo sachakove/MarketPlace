@@ -1,0 +1,97 @@
+.accountHeader {
+  min-height: 25rem;
+  border-radius: 2.4rem;
+  padding: 2rem;
+  background-color: rgb(254, 205, 51, 0.2);
+  position: relative;
+  display: flex;
+}
+
+.user {
+  display: flex;
+  align-items: center;
+  height: 62.5%;
+  width: auto;
+  position: absolute;
+  bottom: -15%;
+}
+
+.user img {
+  width: 14rem;
+}
+
+.userInfo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: clamp(17vw, 31rem, 80%);
+}
+
+.userName {
+  font-weight: 700;
+  padding: 1rem 0;
+  font-size: clamp(1.5rem, 2.4rem, 1rem + 0.8vw) !important;
+  animation: slide-down 300ms ease-out forwards;
+}
+
+.userEmail {
+  font-size: clamp(1.3rem, 1.3vw, 1.5rem);
+  padding: 1rem 0;
+  animation: slide-down 300ms ease-out forwards;
+}
+
+.userNameInput,
+.userEmailInput {
+  border: none;
+  border-bottom: 2px solid #304f01;
+  background-color: transparent;
+  font-size: clamp(0.8vw, 1.3rem, 1.5rem);
+  margin: 1rem 0;
+  animation: slide-down 300ms ease-out forwards;
+}
+
+.userNameInput {
+  font-size: clamp(1.5rem, 2.4rem, 1rem + 0.8vw) !important;
+  font-weight: 700;
+}
+
+.userInfo input:focus {
+  outline: none;
+  border-bottom: 2px solid #3ca4e9;
+  transition: border 0.3s ease-out;
+}
+
+.btnEditAccout {
+  background-color: #fecd33;
+  border: none;
+  border-radius: 1.6rem;
+  position: absolute;
+  bottom: 5%;
+  right: 2%;
+  font-size: clamp(1.2rem, 2.5vw, 1.5rem);
+  height: 5rem;
+  width: clamp(18%, 20rem, 40%);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 2.3rem;
+  cursor: pointer;
+}
+
+@keyframes slide-down {
+  from {
+    opacity: 0;
+    transform: translateY(-3rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media screen and (max-width: 620px) {
+  .user {
+    flex-direction: column;
+    height: 100% !important;
+  }
+}

@@ -1,0 +1,31 @@
+.buttonContainer {
+  cursor: pointer;
+  width: 5%;
+  height: 5rem;
+  margin: 1rem 1rem;
+  z-index: 888;
+}
+
+.bar1,
+.bar2,
+.bar3 {
+  width: 85%;
+  height: 5%;
+  background-color: #979797;
+  margin: 0.6rem;
+  transition: 0.4s;
+}
+
+.change.bar1 {
+  -webkit-transform: rotate(-45deg) translate(-8px, 6px);
+  transform: rotate(-45deg) translate(-8px, 6px);
+}
+
+.change.bar2 {
+  opacity: 0;
+}
+
+.change.bar3 {
+  -webkit-transform: rotate(45deg) translate(-6px, -6px);
+  transform: rotate(45deg) translate(-6px, -6px);
+}

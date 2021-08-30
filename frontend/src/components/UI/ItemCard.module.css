@@ -1,0 +1,75 @@
+.itemCard {
+  height: 40rem;
+  width: clamp(20rem, 30rem, 85%);
+  border: 1px solid rgba(112, 112, 112, 0.16);
+  border-radius: 5%;
+  box-shadow: 0 1px 5px rgb(0, 0, 0, 0.16);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding-bottom: 1rem;
+  cursor: pointer;
+  /* position: relative; */
+  margin: 0rem 2rem 10rem 0rem;
+}
+
+.itemCard:hover {
+  height: 45rem;
+  transition: all 0.5s;
+}
+
+.top {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 97%;
+  height: 28rem;
+}
+
+.top img {
+  max-width: 100%;
+  height: 98%;
+}
+
+.itemName,
+.itemPrice {
+  padding-left: 0.5rem;
+  font-size: 1.7rem;
+  font-weight: 900;
+}
+
+.itemPrice {
+  font-weight: 500 !important;
+  color: #cea728;
+}
+
+.itemAddBtn {
+  width: 62%;
+  height: 10%;
+  border: none;
+  border-radius: 1.5rem;
+  font-size: 1.6rem;
+  background-color: #fecd33;
+  align-self: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 2.5rem;
+
+  -webkit-transition: padding 0.5s;
+}
+
+.itemAddBtn:hover {
+  justify-content: space-between;
+  padding: 0 2rem;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s ease-out;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 430px) {
+  .itemCard {
+    margin-right: 5rem;
+  }
+}

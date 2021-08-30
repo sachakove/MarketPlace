@@ -1,0 +1,37 @@
+{
+  "files": {
+    "main.css": "/static/css/main.830e02ec.chunk.css",
+    "main.js": "/static/js/main.c097383d.chunk.js",
+    "main.js.map": "/static/js/main.c097383d.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.588e7d51.js",
+    "runtime-main.js.map": "/static/js/runtime-main.588e7d51.js.map",
+    "static/js/2.a9cf1654.chunk.js": "/static/js/2.a9cf1654.chunk.js",
+    "static/js/2.a9cf1654.chunk.js.map": "/static/js/2.a9cf1654.chunk.js.map",
+    "static/js/3.5e85170a.chunk.js": "/static/js/3.5e85170a.chunk.js",
+    "static/js/3.5e85170a.chunk.js.map": "/static/js/3.5e85170a.chunk.js.map",
+    "index.html": "/index.html",
+    "static/css/main.830e02ec.chunk.css.map": "/static/css/main.830e02ec.chunk.css.map",
+    "static/js/2.a9cf1654.chunk.js.LICENSE.txt": "/static/js/2.a9cf1654.chunk.js.LICENSE.txt",
+    "static/media/Apples.b123b2eb.png": "/static/media/Apples.b123b2eb.png",
+    "static/media/Icon feather-search.9d4ceae6.svg": "/static/media/Icon feather-search.9d4ceae6.svg",
+    "static/media/Logo@2x.541b691a.png": "/static/media/Logo@2x.541b691a.png",
+    "static/media/add.4f1cfa10.svg": "/static/media/add.4f1cfa10.svg",
+    "static/media/arrowLeft.1a215e7f.svg": "/static/media/arrowLeft.1a215e7f.svg",
+    "static/media/arrowRight.884b255b.svg": "/static/media/arrowRight.884b255b.svg",
+    "static/media/decrease.aaa23880.svg": "/static/media/decrease.aaa23880.svg",
+    "static/media/edit.76dc6c4e.svg": "/static/media/edit.76dc6c4e.svg",
+    "static/media/exist.2c6a7861.svg": "/static/media/exist.2c6a7861.svg",
+    "static/media/firstAdd.9494d3e4.png": "/static/media/firstAdd.9494d3e4.png",
+    "static/media/johndoe.c8a7bd9b.png": "/static/media/johndoe.c8a7bd9b.png",
+    "static/media/logo.5843edf5.png": "/static/media/logo.5843edf5.png",
+    "static/media/secondAdd.78fa62fd.png": "/static/media/secondAdd.78fa62fd.png",
+    "static/media/thirdAdd.12b42ea7.png": "/static/media/thirdAdd.12b42ea7.png",
+    "static/media/user-circle.cb0162dc.svg": "/static/media/user-circle.cb0162dc.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.588e7d51.js",
+    "static/js/2.a9cf1654.chunk.js",
+    "static/css/main.830e02ec.chunk.css",
+    "static/js/main.c097383d.chunk.js"
+  ]
+}

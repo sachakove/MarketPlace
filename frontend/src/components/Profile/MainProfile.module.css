@@ -1,0 +1,8 @@
+.container {
+  width: clamp(57vw, 110rem, 100vw);
+  min-height: 100vh !important;
+  display: column;
+  justify-content: flex-start;
+  align-items: center;
+  margin-top: -4.5%;
+}

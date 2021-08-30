@@ -1,0 +1,9 @@
+.infoContet {
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+  height: 17rem;
+  font-size: 1.7rem;
+  line-height: 2.5rem;
+  font-weight: 500;
+}
