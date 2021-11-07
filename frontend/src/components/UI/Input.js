@@ -1,23 +1,29 @@
-import { useEffect, useState } from "react";
 import classes from "./Input.module.css";
 
 const Input = (props) => {
-  const [valid, setValid] = useState(true);
-  const errors = props.errors;
-  const name = props.input.name;
-  useEffect(() => {
-    errors[name] ? setValid(false) : setValid(true);
-  }, [errors, name]);
+  const {
+    label,
+    name,
+    type,
+    value,
+    handleChange,
+    errorMessage,
+    valid,
+    ...rest
+  } = props;
 
   return (
     <div className={classes.input}>
-      {valid ? (
-        <input {...props.input} />
-      ) : (
-        <input
-          {...props.input}
-          style={{ borderColor: "#ef9a9a", backgroundColor: "#ffcdd2" }}
-        />
+      <input
+        name={name}
+        type={type}
+        value={value}
+        placeholder={name}
+        onChange={handleChange}
+        {...rest}
+      />
+      {errorMessage && !valid && (
+        <span className={classes.error}>{errorMessage}</span>
       )}
     </div>
   );

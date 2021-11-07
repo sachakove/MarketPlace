@@ -48,6 +48,7 @@ function App() {
           <ShopScreen />
         </Route>
         <Route path="/search/:keywords" component={ShopScreen} />
+        <Route path="*" component={MainScreen} />
       </Switch>
     </Layout>
   );

@@ -5,22 +5,27 @@ import { useSelector } from "react-redux";
 import johndoe from "../../assets/johndoe.png";
 import { updateUser } from "../../lib/api";
 import useHttp from "../../hooks/use-http";
+import useForm from "../../hooks/use-Form";
+import { emailValidate } from "../../lib/formValidationRules";
 
 const AccountHeader = () => {
   const [edit, setEdit] = useState(false);
-  const userFullNameInput = useRef();
-  const userEmailInput = useRef();
+  // const userFullNameInput = useRef();
+  // const userEmailInput = useRef();
   const { user, token } = useSelector((state) => state.auth);
   const { sendRequest } = useHttp();
+  const [fullName, setFullName] = useState(
+    `${user.firstName} ${user.lastName}`
+  );
+  const [email, setEmail] = useState(user.email);
 
-  const submitHandler = (event) => {
+  const submitHandler = async (event) => {
     event.preventDefault();
 
     if (edit) {
-      const firstName = userFullNameInput.current.value.split(" ")[0];
-      const lastName = userFullNameInput.current.value.split(" ")[1];
-      const email = userEmailInput.current.value;
-      sendRequest(
+      const firstName = fullName.split(" ")[0];
+      const lastName = fullName.split(" ")[1];
+      await sendRequest(
         updateUser({ token, firstName, lastName, email }),
         "updateContact"
       );
@@ -45,14 +50,14 @@ const AccountHeader = () => {
             <input
               className={classes.userNameInput}
               type="text"
-              defaultValue={`${user.firstName} ${user.lastName}`}
-              ref={userFullNameInput}
+              value={fullName}
+              onChange={(e) => setFullName(e.target.value)}
             />
             <input
               className={classes.userEmailInput}
               type="text"
-              defaultValue={user.email}
-              ref={userEmailInput}
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
             />
           </span>
         )}

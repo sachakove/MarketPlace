@@ -20,8 +20,6 @@ const cartSlice = createSlice({
 
 const onCehckout = (state, action) => {
   const date = new Date();
-  console.log(`${date.getDate()}/${date.getMonth() + 1}/${date.getFullYear()}`);
-  console.log(`this is items: ${state.items}`);
 };
 
 const onAddItem = (state, action) => {

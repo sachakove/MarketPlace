@@ -12,7 +12,6 @@ import {
   getSearchProducts,
   getSubCategoriesApi,
 } from "../../lib/api";
-import { productActions } from "../../store/product-store";
 
 const ShopContent = (props) => {
   const location = useLocation();
@@ -36,7 +35,9 @@ const ShopContent = (props) => {
         const chosenCategory = await categories.find(
           (e) => e.category === category
         );
-        sendRequest(getItemsByCategoryApi(chosenCategory._id), "items");
+        chosenCategory
+          ? sendRequest(getItemsByCategoryApi(chosenCategory._id), "items")
+          : fetchItemsBySearch();
       };
       const fetchItemsBySub = async () => {
         const chosenSub = await subCategories.find(
@@ -46,7 +47,6 @@ const ShopContent = (props) => {
       };
 
       const fetchItemsBySearch = async () => {
-        console.log(keywords);
         sendRequest(getSearchProducts(keywords), "items");
       };
 
@@ -68,14 +68,18 @@ const ShopContent = (props) => {
   ]);
 
   const itemCard = items ? (
-    items.map((item) => (
-      <ItemCard
-        key={item._id}
-        item={item}
-        showItem={props.onShowItemHandler}
-        hideModal={props.onHideItemHandler}
-      />
-    ))
+    items.map((item) =>
+      Object.values(item).length !== 0 ? (
+        <ItemCard
+          key={item._id}
+          item={item}
+          showItem={props.onShowItemHandler}
+          hideModal={props.onHideItemHandler}
+        />
+      ) : (
+        <h1>No products found</h1>
+      )
+    )
   ) : (
     <LoadingSpinner />
   );

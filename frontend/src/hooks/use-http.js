@@ -61,7 +61,6 @@ const useHttp = () => {
               dispatch(httpActions.success());
               return;
             case "items":
-              console.log(`here2`);
               dispatch(productActions.getItems(loadedData));
               dispatch(httpActions.success());
               return;

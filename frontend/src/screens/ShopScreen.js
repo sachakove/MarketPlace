@@ -21,7 +21,6 @@ const ShopScreen = () => {
   };
   const changeMenuState = () => {
     setMenuState(!menuState);
-    console.log(menuState);
   };
 
   useEffect(() => {

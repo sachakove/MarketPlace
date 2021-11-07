@@ -33,7 +33,6 @@ const Header = (props) => {
   useEffect(() => {
     onSmallScreen();
     window.addEventListener("resize", onSmallScreen);
-    console.log(smallScreen);
     return () => window.removeEventListener("resize", onSmallScreen);
   }, [smallScreen]);
 

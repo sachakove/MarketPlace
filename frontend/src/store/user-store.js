@@ -30,7 +30,7 @@ const userSlice = createSlice({
     },
     login(state, action) {
       localStorage.setItem("isLoggedIn", action.payload.token);
-      console.log(action.payload);
+
       return { ...state, isLoggedIn: true, user: action.payload };
     },
     register(state, action) {

@@ -6,11 +6,9 @@ import arrowRight from "../../assets/icons/arrowRight.svg";
 import { useSelector } from "react-redux";
 import useHttp from "../../hooks/use-http";
 import { getCategoriesApi } from "../../lib/api";
-import { Fragment } from "react";
 
 const MainNavigation = () => {
   const [smallScreen, setSmallScreen] = useState(false);
-  const [showMenu, setShowMenu] = useState(false);
   const [scollWidth, setScollWidth] = useState(0);
   let categoryWidth = (window.innerWidth / 100) * 8.333;
   const categories = useSelector((state) => state.product.categories);
@@ -19,7 +17,6 @@ const MainNavigation = () => {
   const adjast = () => {
     setScollWidth(0);
     window.innerWidth <= 1200 ? setSmallScreen(true) : setSmallScreen(false);
-    window.innerWidth <= 770 ? setShowMenu(true) : setShowMenu(false);
     return;
   };
 

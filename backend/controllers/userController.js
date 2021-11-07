@@ -45,7 +45,7 @@ export const registerUser = async (req, res, next) => {
       });
 
       if (user) {
-        res.json({
+        await res.json({
           _id: user._id,
           firstName: user.firstName,
           lastNAme: user.lastName,
@@ -71,6 +71,7 @@ export const registerUser = async (req, res, next) => {
 // @route POST /api/users/profile
 // @access Private
 export const getUserProfile = async (req, res, next) => {
+  console.log(`this is user: ${req.user}`);
   try {
     const user = req.user;
     if (user) {

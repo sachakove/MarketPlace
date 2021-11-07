@@ -27,7 +27,6 @@ const productSlice = createSlice({
       return onGetItems(state, action);
     },
     getItem(state, action) {
-      console.log(`here`);
       return { ...state, item: action.payload };
     },
     clearItems(state, action) {
@@ -56,6 +55,11 @@ const onMainProducts = (state, action) => {
 
 const onGetItems = (state, action) => {
   state.items = null;
+  const payload = action.payload;
+  // console.log(action.payload);
+  if (payload.length === 0) {
+    payload.push({});
+  }
   return {
     ...state,
     items: action.payload,

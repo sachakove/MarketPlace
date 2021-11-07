@@ -9,6 +9,8 @@ const Search = (props) => {
   const [active, setActive] = useState(false);
   const history = useHistory();
   const { sendRequest } = useHttp();
+
+  //
   const submitHandler = (e) => {
     e.preventDefault();
 
@@ -21,6 +23,7 @@ const Search = (props) => {
       history.push(`/`);
     }
   };
+
   const handleClick = (e) => {
     if (!props.smallScreen) {
       submitHandler(e);
